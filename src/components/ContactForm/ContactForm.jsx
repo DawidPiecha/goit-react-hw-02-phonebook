@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './ContactForm.module.css';
 
 const ContactForm = ({ name, number, onChange, addContact }) => {
@@ -13,6 +14,7 @@ const ContactForm = ({ name, number, onChange, addContact }) => {
         </label>
         <input
           className={css.form__input}
+          id="name"
           type="text"
           name="name"
           value={name}
@@ -20,6 +22,7 @@ const ContactForm = ({ name, number, onChange, addContact }) => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           onChange={onChange}
           placeholder="Enter name"
+          autoComplete="name"
           required
         />{' '}
         <label className={css.form__label} htmlFor="number">
@@ -27,6 +30,7 @@ const ContactForm = ({ name, number, onChange, addContact }) => {
         </label>
         <input
           className={css.form__input}
+          id="number"
           type="tel"
           name="number"
           value={number}
@@ -34,6 +38,7 @@ const ContactForm = ({ name, number, onChange, addContact }) => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           onChange={onChange}
           placeholder="Enter phone number"
+          autoComplete="tel"
           required
         />
         <button
@@ -46,6 +51,13 @@ const ContactForm = ({ name, number, onChange, addContact }) => {
       </form>
     </div>
   );
+};
+
+ContactForm.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  addContact: PropTypes.func.isRequired,
 };
 
 export { ContactForm };

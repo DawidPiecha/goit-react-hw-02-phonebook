@@ -55,4 +55,5 @@
 .form__button:disabled {
   color: darkgrey;
   background-color: grey;
+  cursor: default;
 }

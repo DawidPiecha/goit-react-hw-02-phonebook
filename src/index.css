@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-size: cover;
   background-attachment: fixed;
-  background-image: linear-gradient(to right, #6190e8, #a7bfe8);
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   background-size: 200%;
   animation: bg-animation 5s infinite alternate;
 
