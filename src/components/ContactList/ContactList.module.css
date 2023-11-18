@@ -13,3 +13,26 @@
 .emptyList {
   border: none;
 }
+.contactList__item {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.deleteButton {
+  font-size: 10px;
+  cursor: pointer;
+  color: goldenrod;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: indigo;
+}
+.deleteButton:hover {
+  color: indigo;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: goldenrod;
+}
